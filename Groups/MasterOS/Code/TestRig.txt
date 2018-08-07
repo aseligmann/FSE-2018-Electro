@@ -1,0 +1,24 @@
+Ting der skal være på dashboard
+	IMD failure light
+	AMS failure light
+	E-stop
+	Tractive system activation button
+	Ready to drive button
+	(Info screen)
+
+Ting der skal være på test-rig
+	Steering wheel potentiometer
+	Brake pedal potentiometers
+	Accelerator pedal potentiometers
+	Motor Current potentiometer
+	Tractive System active button - EV5.11.6
+
+	Cooling Pump Signal Indicators
+	Brake Light Signal Indicators
+	Ready To Drive Sound Indicator
+	BSPD Activation Indicator
+	Motor Control Signal Indicator
+	APPS/Brake Pedal Plausibility Check Indicator - EV2.4
+	Tractive System Active Indicator
+
+Husk T10.4.4 - at mange ting skal tænde når man starter op

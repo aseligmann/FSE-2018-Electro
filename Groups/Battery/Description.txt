@@ -1,0 +1,6 @@
+See ESF section 3 in Submitted Documents for description of battery.
+
+Changes to the battery have since been made because of safety, heat and space issues.
+The changes are as follows:
+4 segments in series instead of 7, resulting in a nominal voltage of 59.2 V.
+AIRs have been replaced with smaller relays which are rated for 600 A.

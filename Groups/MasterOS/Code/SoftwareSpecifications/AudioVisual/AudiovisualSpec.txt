@@ -1,0 +1,58 @@
+CAN-messages:
+	Sends no signals.
+
+	Receives signals from ID 110:
+		Normal operation
+
+	Receives signals from ID 100:
+		Error
+
+	Receives signals from ID 220:
+		Ready to drive
+
+Behaviour:
+	State machine for brake light:
+		States:
+			Shining
+			Non-shining
+		Transitions from shining:
+			when packet from ID 110:
+				if byte1 = 0 then transition to non-shining
+				else do nothing
+			when packet from ID 100:
+				if !(data & 0b10110010) then transition to non-shining
+				else do nothing
+			when packet from ID 220:
+				do nothing
+		Transitions from non-shining:
+			when packet from ID 110:
+				if byte1 > 0 then transition to shining
+				else do nothing
+			when packet from ID 100:
+				if (data & 0b10110010) then transition to shining
+				else do nothing
+			when packet from ID 220:
+				do nothing
+
+	State machine for siren:
+		States:
+			On
+			Off
+		Transitions from off:
+			when packet from ID 110:
+				do nothing
+			when packet from ID 100:
+				do nothing
+			when packet from ID 220:
+				transition to on
+				set timer for 1.5 s
+
+		Transitions from on:
+			when packet from ID 110:
+				do nothing
+			when packet from ID 100:
+				do nothing
+			when packet from ID 220:
+				reset timer
+			when timer expires
+				transition to off

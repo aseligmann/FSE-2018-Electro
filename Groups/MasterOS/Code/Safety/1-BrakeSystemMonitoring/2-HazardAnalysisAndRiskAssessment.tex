@@ -1,0 +1,162 @@
+\section{Hazard analysis and risk assessment}
+% Reference: DS/ISO 26262-3 section 7.4.1.1 -- 7.4.4.2
+%
+% Pre-requisites:
+%    - Item definition
+%
+% The item is evaluated based ONLY on the item definition, i.e. WITHOUT considering
+% internal safety mechanisms that are already implemented or are planned.
+% Safety mechanisms that are intended to be implemented are instead part of the
+% functional safety concept.
+% 
+% Reference: DS/ISO 26262-3 section 7.4.1
+
+\subsection{Pre-existing information}
+% This section is for further supporting information such as
+%    - Change impact analysis if applicable (only for existing items being changed)
+%    - Relevant information on other independent items
+%
+% Reference: DS/ISO 26262-3 section 7.3.2
+The brake system monitoring is a new item, so there will be no change impact.
+
+\subsection{Situation analysis}
+% The operational situations and operating modes in which an item's malfunctioning
+% behaviour will result in a hazardous event are described.
+% Consider both situations when the vehicle is correctly used AND when it is
+% incorrectly used in a foreseeable manner.
+% It is NOT necessary to consider situations in which the item is not expected to
+% behave safely, i.e. when driving off-road.
+%
+% Required information:
+%   - List of situations/modes in which the item may malfunction in a hazardous way
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.1
+The following situations will be considered:
+\begin{description}
+\item [1-OS1] Standstill - tractive system inactive
+\item [1-OS2] Standstill - tractive system active
+\item [1-OS3] Driving straight - constant speed
+\item [1-OS4] Driving straight - accelerating
+\item [1-OS5] Driving straight - decelerating
+\item [1-OS6] Entering corner - constant speed
+\item [1-OS7] Entering corner - accelerating
+\item [1-OS8] Entering corner - decelerating
+\item [1-OS9] Exiting corner - constant speed
+\item [1-OS10] Exiting corner - accelerating
+\item [1-OS11] Exiting corner - decelerating
+\item [1-OS12] Being pushed
+\item [1-OS13] Undergoing maintenance/repairs.
+\end{description}
+
+\subsection{Hazard identification}
+% Identify hazards systematically using e.g. brainstorming, FMEA and tests.
+%
+% A hazard is a potential source of harm caused by malfunctioning behaviour.
+% A hazard is defined in terms of conditions or behaviour that can be observed at
+% the vehicle level assuming every other independent item/system is functioning
+% correctly.
+% A hazard can have many potential causes related to the implementation of the item,
+% but these do NOT need to be considered in this hazard analysis and risk assessment,
+% which is derived from a functional behaviour of the item.
+The following hazards will be considered:
+\begin{description}
+\item [1-HZ1] Brake light shining when not braking
+\item [1-HZ2] Brake light not shining when braking
+\end{description}
+
+% A hazardous event is a combination of a hazard and an operational situation.
+% A hazardous event may have several simultaneous consequences, which must be
+% considered together.
+%
+% Required information:
+%    - List of hazards that can be observed at the vehicle level
+%    - List of hazardous events for combinations of hazards and operational situations
+%    - The consequences of each hazardous event
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.2
+% Definitions: DS/ISO 26262-1 term 1.57 -- 1.59
+The operational situations and the hazards result in the following possible hazardous events:
+\begin{center}
+\begin{tabular}{l|l|l|l}
+Operational situation	& Hazard	& Hazardous event	& Consequences \\
+1-OS1			& 1-HZ1	& 1-OS1-HZ1			& No danger since vehicle is stationary with tractive system inactive. \\
+1-OS1			& 1-HZ2	& 1-OS1-HZ2			& No danger even though bystanders may think driver is about to accelerate when he is not. \\
+1-OS2			& 1-HZ1	& 1-OS2-HZ1			& Bystanders may believe vehicle is staying stationary, while driver may actually be about to accelerate. \\
+1-OS2			& 1-HZ2	& 1-OS2-HZ2			& No danger even though bystanders may think driver is about to accelerate. \\
+1-OS3			& 1-HZ1	& 1-OS3-HZ1			& Bystanders may believe vehicle is about to slow down, while it will actually maintain constant speed. \\
+1-OS3			& 1-HZ2	& 1-OS3-HZ2			& If another vehicle is close behind while braking, the driver of the other vehicle may not be able to react in time. \\
+1-OS4			& 1-HZ1	& 1-OS4-HZ1			& No danger, though the driver of another vehicle close behind may be confused by the situation. \\
+1-OS4			& 1-HZ2	& 1-OS4-HZ2			& If another vehicle is close behind while braking, the driver of the other vehicle may not be able to react in time. \\
+1-OS5			& 1-HZ1	& 1-OS5-HZ1			& Low danger, though if another vehicle is close behind while decelerating, the driver of the other vehicle may believe that the vehicle is decelerating faster than what is the case. \\
+1-OS5			& 1-HZ2	& 1-OS5-HZ2			& If another vehicle is close behind while decelerating, the driver of the other vehicle may not be able to react in time. \\
+1-OS6			& 1-HZ1	& 1-OS6-HZ1			& Low danger, though if another vehicle is close behind, the driver of the other vehicle may believe that the vehicle is decelerating. \\
+1-OS6			& 1-HZ2	& 1-OS6-HZ2			& If another vehicle is close behind while braking, the driver of the other vehicle may not be able to react in time. \\
+1-OS7			& 1-HZ1	& 1-OS7-HZ1			& No danger, though the driver of another vehicle close behind may be confused by the situation. \\
+1-OS7			& 1-HZ2	& 1-OS7-HZ2			& If another vehicle is close behind while braking, the driver of the other vehicle may not be able to react in time. \\
+1-OS8			& 1-HZ1	& 1-OS8-HZ1			& Low danger, though if another vehicle is close behind while decelerating, the driver of the other vehicle may believe that the vehicle is decelerating faster than what is the case. \\
+1-OS8			& 1-HZ2	& 1-OS8-HZ2			& If another vehicle is close behind while decelerating, the driver of the other vehicle may not be able to react in time. \\
+1-OS9			& 1-HZ1	& 1-OS9-HZ1			& Low danger, though if another vehicle is close behind, the driver of the other vehicle may believe that the vehicle is decelerating. \\
+1-OS9			& 1-HZ2	& 1-OS9-HZ2			& If another vehicle is close behind while braking, the driver of the other vehicle may not be able to react in time. \\
+1-OS10			& 1-HZ1	& 1-OS10-HZ1			& No danger, though the driver of another vehicle close behind may be confused by the situation. \\
+1-OS10			& 1-HZ2	& 1-OS10-HZ2			& If another vehicle is close behind while braking, the driver of the other vehicle may not be able to react in time. \\
+1-OS11			& 1-HZ1	& 1-OS11-HZ1			& No danger, though if another vehicle is close behind while decelerating, the driver of the other vehicle may believe that the vehicle is decelerating faster than what is the case. \\
+1-OS11			& 1-HZ2	& 1-OS11-HZ2			& If another vehicle is close behind while decelerating, the driver of the other vehicle may not be able to react in time. \\
+1-OS12			& 1-HZ1	& 1-OS12-HZ1			& No danger, though pushing crew may be surprised. \\
+1-OS12			& 1-HZ2	& 1-OS12-HZ2			& No danger, though pushing crew may be surprised. \\
+1-OS13			& 1-HZ1	& 1-OS13-HZ1			& No danger. \\
+1-OS13			& 1-HZ2	& 1-OS13-HZ2			& No danger.
+\end{tabular}
+\end{center}
+
+\subsection{Classification of hazardous events}
+% All hazardous events shall be classified, unless they are outside the scope of
+% DS/ISO 26262, e.g.  electric shock or fires not directly caused by malfunctioning
+% E/E systems.
+%
+% If there is doubt about the classification of a hazard, it should be classified 
+% conservatively, i.e. a higher ASIL classification shall be given rather than a lower.
+%
+% Required information for each hazardous event:
+%    - Estimate of severity class of potential harm from the event
+%    - Probability class of exposure of each operational situation causing the event
+%    - Estimate of controllability class of the event
+%    - An ASIL for the event using the above parameters, ensuring that the operational
+%      situations are not too granular so the exposure classes are inappropriately low
+%
+% References:
+%	DS/ISO 26262-3 section 7.4.3 -- 7.4.4.2
+%    - Severity class: DS/ISO 26262-3 Table 1
+%    - Exposure probability class: DS/ISO 26262-3 Table 2
+%    - Controllability class: DS/ISO 26262-3 Table 3
+%    - ASIL determination: DS/ISO 26262-3 Table 4
+\begin{center}
+\begin{tabular}{l|l|l|l|l}
+Hazardous event	& Severity	& Exposure probability	& Controllability	& ASIL	\\
+1-OS1-HZ1			& S0		& E1					& C0				& N/A	\\
+1-OS1-HZ2			& S0		& E1					& C0				& N/A	\\
+1-OS2-HZ1			& S3		& E3					& C0				& N/A	\\
+1-OS2-HZ2			& S0		& E3					& C0				& N/A	\\
+1-OS3-HZ1			& S3		& E2					& C0				& N/A	\\
+1-OS3-HZ2			& S1		& E2					& C3				& QM	\\
+1-OS4-HZ1			& S0		& E4					& C0				& N/A	\\
+1-OS4-HZ2			& S3		& E4					& C3				& D		\\
+1-OS5-HZ1			& S0		& E2					& C0				& N/A	\\
+1-OS5-HZ2			& S2		& E2					& C3				& A		\\
+1-OS6-HZ1			& S0		& E3					& C0				& N/A	\\
+1-OS6-HZ2			& S1		& E3					& C2				& QM	\\
+1-OS7-HZ1			& S1		& E3					& C0				& N/A	\\
+1-OS7-HZ2			& S2		& E3					& C2				& A		\\
+1-OS8-HZ1			& S1		& E4					& C0				& N/A	\\
+1-OS8-HZ2			& S3		& E4					& C1				& B		\\
+1-OS9-HZ1			& S0		& E3					& C0				& N/A	\\
+1-OS9-HZ2			& S1		& E3					& C2				& QM	\\
+1-OS10-HZ1			& S0		& E4					& C1				& N/A	\\
+1-OS10-HZ2			& S1		& E4					& C3				& B		\\
+1-OS11-HZ1			& S1		& E3					& C0				& N/A	\\
+1-OS11-HZ2			& S1		& E3					& C1				& QM	\\
+1-OS12-HZ1			& S0		& E3					& C0				& N/A	\\
+1-OS12-HZ2			& S0		& E3					& C0				& N/A	\\
+1-OS13-HZ1			& S0		& E4					& C0				& N/A	\\
+1-OS13-HZ2			& S0		& E4					& C0				& N/A
+\end{tabular}
+\end{center}

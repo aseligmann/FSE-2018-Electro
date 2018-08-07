@@ -1,0 +1,13 @@
+Læs problemformuleringen!
+
+Find ud af software på cRIO
+	- Lav test-rig
+	- Planlæg tilstandsmaskiner
+	- Programmer cRIO
+Lav BSPD færdig
+Lav mindst en kasse helt færdig så den er "pæn"
+Færdiggør software på Arduinoer så det virker 100% - timeout og filter
+Pumpe-kredsløb - Done for nu (medmindre der skal laves rigtig PWM)
+GLVS-kredsløb (BMS)
+(Dashboard)
+Grounding concept - Det er tilsyneladende intet problem

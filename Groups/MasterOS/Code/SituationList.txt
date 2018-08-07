@@ -1,0 +1,13 @@
+Standstill - tractive system inactive
+Standstill - tractive system active
+Driving straight - constant speed
+Driving straight - accelerating
+Driving straight - decelerating
+Entering corner - constant speed
+Entering corner - accelerating
+Entering corner - decelerating
+Exiting corner - constant speed
+Exiting corner - accelerating
+Exiting corner - decelerating
+Being pushed
+Undergoing maintenance/repairs

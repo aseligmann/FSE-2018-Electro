@@ -1,0 +1,80 @@
+CAN-messages:
+	Sends signals:
+		Normal operation (ID 710, 1 byte)
+			1 byte cooling control signal
+
+		Error (ID 90, 1 byte)
+			1 byte cooling control signal (when overtemperature is reached)
+
+	Receives signals from ID 720:
+		Motor status signal
+
+Behaviour:
+	Interrupts:
+		when packet from ID 720:
+			motorpwr = packet->data[0]
+			motortemp = packet->data[1]
+
+	Main loop:
+		if motorpwr > MIN_PWR then
+			if motortemp > NORMAL_TEMP
+				control = 100%
+			else
+				control = NORMAL_CTRL
+		else if motortemp > NORMAL_TEMP
+			control = 100%
+		else
+			control = 0%
+ELLER:
+		if motortemp > NORMAL_TEMP then
+			control = 100%
+		else if motorpwr > MIN_PWR then
+			control = 100%
+		else if 
+		
+
+		if temp > MAX_TEMP then
+			send packet ID 90 containing control signal
+		else
+			send packet ID 710 containing control signal
+
+
+
+Temperatur måles på motorer
+Hvis motorer afgiver effekt over en lille brøkdel tændes pumperne på fuld kraft indtil motortemperatur er under en eller anden fast værdi.
+Pumpemotorerne er nok ikke ens, overføringsfunktion?
+Pumpemotorerne kan ikke lide PWM (?), så et low-pass filter på output.
+Pumpemotorerne kan måske ikke startes ved lav duty cycle, så spin up til 100% i et par hundrede millisekunder før der skrues ned.
+Der bør være lidt hysterese i overgangen fra lav til høj temperatur og omvendt når motoren er slukket for at den ikke oscillerer.
+
+
+	State machine:
+		States:
+			Motor off - low temperature
+			Motor off - high temperature
+			Motor on
+
+		Transitions from Motor off - low temperature:
+			if motorpwr > MIN_PWR then
+				transition to Motor on
+			else if motortemp > NORMAL_TEMP + HYSTERESIS then
+				transition to Motor off - high temperature
+			else
+				stay in Motor off - low temperature
+
+		Transitions from Motor off - high temperature
+			if motorpwr > MIN_PWR then
+				transition to Motor on
+			else if motortemp < NORMAL_TEMP - HYSTERESIS then
+				transition to Motor off - low temperature
+			else
+				stay in Motor off - high temperature
+
+		Transitions from Motor on
+			if motorpwr > MIN_PWR then
+				stay in Motor on
+			else
+				if motortemp > NORMAL_TEMP
+					transition to Motor off - high temperature
+				else
+					transition to Motor off - low temperature

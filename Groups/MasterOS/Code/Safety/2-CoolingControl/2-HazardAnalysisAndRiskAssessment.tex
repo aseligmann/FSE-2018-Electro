@@ -1,0 +1,146 @@
+\section{Hazard analysis and risk assessment}
+% Reference: DS/ISO 26262-3 section 7.4.1.1 -- 7.4.4.2
+%
+% Pre-requisites:
+%    - Item definition
+%
+% The item is evaluated based ONLY on the item definition, i.e. WITHOUT considering
+% internal safety mechanisms that are already implemented or are planned.
+% Safety mechanisms that are intended to be implemented are instead part of the
+% functional safety concept.
+%
+% Reference: DS/ISO 26262-3 section 7.4.1
+
+\subsection{Pre-existing information}
+% This section is for further supporting information such as
+%    - Change impact analysis if applicable (only for existing items being changed)
+%    - Relevant information on other independent items
+%
+% Reference: DS/ISO 26262-3 section 7.3.2
+
+The cooling control system is a new item so there will be no change impact.
+The motor controller is an EM-drive 500 which has a built in cut-off temperature.
+
+\subsection{Situation analysis}
+% The operational situations and operating modes in which an item's malfunctioning
+% behaviour will result in a hazardous event are described.
+% Consider both situations when the vehicle is correctly used AND when it is
+% incorrectly used in a foreseeable manner.
+% It is NOT necessary to consider situations in which the item is not expected to
+% behave safely, i.e. when driving off-road.
+%
+% Required information:
+%   - List of situations/modes in which the item may malfunction in a hazardous way
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.1
+
+The following situations will be considered:
+\begin{description}
+\item [2-OS1] Standstill - tractive system active
+\item [2-OS2] Driving straight - constant speed
+\item [2-OS3] Driving straight - accelerating
+\item [2-OS4] Driving straight - decelerating
+\item [2-OS5] Entering corner - constant speed
+\item [2-OS6] Entering corner - accelerating
+\item [2-OS7] Entering corner - decelerating
+\item [2-OS8] Exiting corner - constant speed
+\item [2-OS9] Exiting corner - accelerating
+\item [2-OS10] Exiting corner - decelerating
+\end{description}
+
+We will not consider the following situtations: Standstill - tractive system inactive,
+vehicle being pushed and vehicle undergoing maintenance/repairs.
+In these situtations the cooling system should be inactive.
+If the cooling system is active and should not be this should not pose any danger.
+
+\subsection{Hazard identification}
+% Identify hazards systematically using e.g. brainstorming, FMEA and tests.
+%
+% A hazard is a potential source of harm caused by malfunctioning behaviour.
+% A hazard is defined in terms of conditions or behaviour that can be observed at
+% the vehicle level assuming every other independent item/system is functioning
+% correctly.
+% A hazard can have many potential causes related to the implementation of the item,
+% but these do NOT need to be considered in this hazard analysis and risk assessment,
+% which is derived from a functional behaviour of the item.
+
+% A hazardous event is a combination of a hazard and an operational situation.
+% A hazardous event may have several simultaneous consequences, which must be
+% considered together.
+%
+% Required information:
+%    - List of hazards that can be observed at the vehicle level
+%    - List of hazardous events for combinations of hazards and operational situations
+%    - The consequences of each hazardous event
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.2
+% Definitions: DS/ISO 26262-1 term 1.57 -- 1.59
+
+The following hazard will be considered:
+\begin{description}
+\item [2-HZ1] unexpected loss of acceleration and regenerative braking while tractive system is active - caused by EM-drive temperature cutoff
+\end{description}
+
+The operational situations and the hazards result in the following possible hazardous events:
+\begin{center}
+\begin{tabular}{l|l|l|l}
+Operational situation	& Hazard	 & Hazardous event	& Consequences \\
+2-OS1			& 2-HZ1	& 2-OS1-HZ1		& No danger, though bystanders may think driver is about to accelerate when he is not. \\
+2-OS2			& 2-HZ1	& 2-OS2-HZ1		& No danger, though vehicle will decelerate slightly and may confuse the driver behind.
+2-OS3			& 2-HZ1	& 2-OS3-HZ1		& No danger, though vehicle will decelerate slightly and may confuse the driver behind.
+2-OS4			& 2-HZ1	& 2-OS4-HZ1		& Maybe dangerous, as braking force will suddenly decrease causing confusion.
+2-OS5			& 2-HZ1	& 2-OS5-HZ1		& No danger
+2-OS6			& 2-HZ1	& 2-OS6-HZ1		& No danger, though vehicle will decelerate slightly and may confuse the driver behind.
+2-OS7			& 2-HZ1	& 2-OS7-HZ1		& Maybe dangerous, as braking force will suddenly decrease causing confusion.
+2-OS8			& 2-HZ1	& 2-OS8-HZ1		& No danger, though vehicle will decelerate slightly and may confuse the driver behind.
+2-OS9			& 2-HZ1	& 2-OS9-HZ1		& Maybe dangerous, as driver behind will expect vehicle to accelerate.
+2-OS10			& 2-HZ1	& 2-OS10-HZ1   	& Maybe dangerous, as braking force will suddenly decrease causing confusion.
+
+
+
+
+\subsection{Classification of hazardous events}
+% All hazardous events shall be classified, unless they are outside the scope of
+% DS/ISO 26262, e.g.  electric shock or fires not directly caused by malfunctioning
+% E/E systems.
+%
+% If there is doubt about the classification of a hazard, it should be classified
+% conservatively, i.e. a higher ASIL classification shall be given rather than a lower.
+%
+% Required information for each hazardous event:
+%    - Estimate of severity class of potential harm from the event
+%    - Probability class of exposure of each operational situation causing the event
+%    - Estimate of controllability class of the event
+%    - An ASIL for the event using the above parameters, ensuring that the operational
+%      situations are not too granular so the exposure classes are inappropriately low
+%
+% References:
+%	DS/ISO 26262-3 section 7.4.3 -- 7.4.4.2
+%    - Severity class: DS/ISO 26262-3 Table 1
+%    - Exposure probability class: DS/ISO 26262-3 Table 2
+%    - Controllability class: DS/ISO 26262-3 Table 3
+%    - ASIL determination: DS/ISO 26262-3 Table 4
+
+
+
+
+
+
+
+
+\begin{center}
+\begin{tabular}{l|l|l|l|l}
+Hazardous event	& Severity	& Exposure probability	& Controllability	& ASIL	\\
+2-OS1-HZ1		& S0		& E3					& C0				& N/A	\\
+2-OS2-HZ1		& S1		& E2					& C1				& QM	\\
+2-OS3-HZ1		& S2		& E4					& C1				& A	\\
+2-OS4-HZ1		& S2		& E2					& C1				& QM	\\
+2-OS5-HZ1		& S1		& E3					& C1				& QM	\\
+2-OS6-HZ1		& S3		& E3					& C1				& A	\\
+2-OS7-HZ1		& S2		& E4					& C1				& A	\\
+2-OS8-HZ1		& S2		& E3					& C1				& QM		\\
+2-OS9-HZ1		& S3		& E4					& C2				& C	\\
+2-OS10-HZ1		& S1		& E3					& C1				& QM		\\
+
+\end{tabular}
+\end{center}

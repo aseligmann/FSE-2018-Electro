@@ -1,0 +1,116 @@
+\section{Software verification report}
+% Reference: DS/ISO 26262-6 section 7.4.18
+%
+% Pre-requisites:
+%    - Software safety requirements specification
+%    - Software architectural design specification
+%
+% Reference: DS/ISO 26262-6 section 7.3.1
+
+\subsection{Pre-existing information}
+% The following information can be considered:
+%    - Technical safety concept
+%    - System design specification
+%    - Available third party software components
+%    - Tool application guidelines
+%
+% Reference: DS/ISO 26262-6 section 7.3.2
+
+\subsection{SYSTEM NAME}
+\subsubsection{Architectural design verification}
+% The software architectural design shall be verified to demonstrate the following
+% properties:
+%    - Compliance with the software safety requirements
+%    - Compatibility with the target hardware, including resources
+%
+% The following verification methods may be used, depending on the assigned ASIL
+% of the software component:
+%    - Walk-through of the design (or model, if using model-based development)
+%    - Inspection of the design (or model, if using model-based development)
+%    - Simulation of dynamic parts of the design
+%    - Prototype generation
+%    - Formal verification
+%    - Control flow analysis
+%    - Data flow analysis
+%
+% Required information:
+%    -  software design verification of the software architecture of the system
+%
+% References:
+%    - DS/ISO 26262-6 section 7.4.18
+%    - Verification methods: DS/ISO 26262-6 Table 6
+
+\subsubsection{Unit design verification}
+% Pre-requisites:
+%    - Software unit design specification
+%    - Software unit implementation
+%
+% The software unit design and implementation shall be verified to demonstrate:
+%    - Fulfillment of the software safety requirement allocated to each unit
+%    - Compatibility of the software unit implementation with the target hardware
+%
+% The following verification methods can be applied, depending on the assigned
+% ASIL of the software unit:
+%    - Walk-through of the code/model
+%    - Inspection of the code/model
+%    - Semi-formal verification
+%    - Formal verification
+%    - Control flow analysis
+%    - Data flow analysis
+%    - Static code analysis
+%    - Semantic code analysis
+%
+% Required information:
+%    -  software design and implementation verification of the software unit
+%
+% References:
+%    - DS/ISO 26262-6 section 8.4.5
+%    - Verification methods: DS/ISO 26262-6 Table 9
+
+\subsubsection{Unit testing}
+% Pre-requisites:
+%    - Software unit design specification
+%    - Software unit implementation
+%
+% The software unit implementation shall be tested to demonstrate that the
+% software units achieve:
+%    - Compliance with the software unit design specification
+%    - The specified functionality
+%    - Confidence in the absence of unintended functionality
+%    - Robustness
+%    - Sufficient resources to support the implementation
+%
+% The following testing methods can be applied, depending on the assigned
+% ASIL of the software unit:
+%    - Requirements-based test
+%    - Interface test
+%    - Fault injection test (e.g. corrupting variable values or introducing code errors)
+%    - Resource usage test
+%    - Back-to-back comparison between model and code (if possible)
+%
+% References:
+%    - DS/ISO 26262-6 section 9.4.2 -- 9.4.3
+%    - Testing methods: DS/ISO 26262-6 Table 10
+
+\subsubsection{Integration testing}
+% Pre-requisites:
+%    - Software architectural design specification
+%    - Software unit implementation
+%
+% The software units must be integrated and it must be demonstrated that the
+% software architectural design is realized by the implementation.
+%
+% The following testing methods can be applied, depending on the assigned
+% ASIL of the software unit:
+%    - Requirements-based test
+%    - Interface test
+%    - Fault injection test (e.g. corrupting variable values or introducing code errors)
+%    - Resource usage test
+%    - Back-to-back comparison between model and code (if possible)
+%
+% References:
+%    - DS/ISO 26262-6 section 10.4.2 -- 9.4.3
+%    - Testing methods: DS/ISO 26262-6 Table 13
+%
+%
+% <<< Repeat these sections for each system required to implement the item >>>

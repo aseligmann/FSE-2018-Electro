@@ -1,0 +1,308 @@
+\section{Hazard analysis and risk assessment}
+% Reference: DS/ISO 26262-3 section 7.4.1.1 -- 7.4.4.2
+%
+% Pre-requisites:
+%    - Item definition
+%
+% The item is evaluated based ONLY on the item definition, i.e. WITHOUT considering
+% internal safety mechanisms that are already implemented or are planned.
+% Safety mechanisms that are intended to be implemented are instead part of the
+% functional safety concept.
+% 
+% Reference: DS/ISO 26262-3 section 7.4.1
+
+\subsection{Pre-existing information}
+% This section is for further supporting information such as
+%    - Change impact analysis if applicable (only for existing items being changed)
+%    - Relevant information on other independent items
+%
+% Reference: DS/ISO 26262-3 section 7.3.2
+
+
+\subsection{Situation analysis}
+% The operational situations and operating modes in which an item's malfunctioning
+% behaviour will result in a hazardous event are described.
+% Consider both situations when the vehicle is correctly used AND when it is
+% incorrectly used in a foreseeable manner.
+% It is NOT necessary to consider situations in which the item is not expected to
+% behave safely, i.e. when driving off-road.
+%
+% Required information:
+%   - List of situations/modes in which the item may malfunction in a hazardous way
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.1
+\begin{description}  
+	\item [4-OS1] Standstill - tractive system inactive
+	\item [4-OS2] Standstill - tractive system active
+	\item [4-OS3] Driving straight - constant speed
+	\item [4-OS4] Driving straight - accelerating
+	\item [4-OS5] Driving straight - decelerating
+	\item [4-OS6] Entering corner - constant speed
+	\item [4-OS7] Entering corner - accelerating
+	\item [4-OS8] Entering corner - decelerating
+	\item [4-OS9] Exiting corner - constant speed
+	\item [4-OS10] Exiting corner - accelerating
+	\item [4-OS11] Exiting corner - decelerating
+	\item [4-OS12] Being pushed
+	\item [4-OS13] Undergoing maintenance/repairs
+\end{description}
+
+
+\subsection{Hazard identification}
+% Identify hazards systematically using e.g. brainstorming, FMEA and tests.
+%
+% A hazard is a potential source of harm caused by malfunctioning behaviour.
+% A hazard is defined in terms of conditions or behaviour that can be observed at
+% the vehicle level assuming every other independent item/system is functioning
+% correctly.
+% A hazard can have many potential causes related to the implementation of the item,
+% but these do NOT need to be considered in this hazard analysis and risk assessment,
+% which is derived from a functional behaviour of the item.
+
+\begin{description}
+	\item [4-HZ1] Tractive system activates when inactive
+	\item [4-HZ2] Tractive system deactivates when active
+	\item [4-HZ3] Tractive system blink light illuminates when the tractive system is inactivated
+	\item [4-HZ4] Tractive system blink light does not illuminate	 when the tractive system is activated
+	\item [4-HZ5] Tractive system inactive light does not illuminate when the tractive system is inactivated
+	\item [4-HZ6] Tractive system inactive light illuminates when the tractive system is activated
+	\item [4-HZ7] The vehicle does not accelerate when change in accelerator position happens 
+	\item [4-HZ8] The vehicle unexpectedly accelerates when no change in accelerator position happens
+\end{description}
+
+% A hazardous event is a combination of a hazard and an operational situation.
+% A hazardous event may have several simultaneous consequences, which must be
+% considered together.
+%
+% Required information:
+%    - List of hazards that can be observed at the vehicle level
+%    - List of hazardous events for combinations of hazards and operational situations
+%    - The consequences of each hazardous event
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.2
+% Definitions: DS/ISO 26262-1 term 1.57 -- 1.59
+
+\begin{center}
+\begin{tabular}{l|l|l|l}
+Operational situation	& Hazard		& Hazardous event	& Consequences \\
+4-OS1		& 4-HZ1		& 4-OS1-HZ1		& No danger if the start switch is open. 
+Bystanders may be hit by accidental acceleration from the vehicle if the start switch is closed \\
+4-OS1		& 4-HZ2		& 4-OS1-HZ2		& N/A \\
+4-OS1		& 4-HZ3		& 4-OS1-HZ3		& No danger, tractive system is inactive \\
+4-OS1		& 4-HZ4		& 4-OS1-HZ4		& N/A \\	
+4-OS1		& 4-HZ5		& 4-OS1-HZ5		& No danger, tractive system is inactive \\
+4-OS1		& 4-HZ6		& 4-OS1-HZ6		& N/A \\
+4-OS1		& 4-HZ7		& 4-OS1-HZ7		& No danger, the vehicle is in standstill \\
+4-OS1		& 4-HZ8		& 4-OS1-HZ8		& N/A \\
+
+4-OS2		& 4-HZ1		& 4-OS2-HZ1		& N/A \\	
+4-OS2		& 4-HZ2		& 4-OS2-HZ2		& No danger, tractive system is inactive \\
+4-OS2		& 4-HZ3		& 4-OS2-HZ3		& N/A \\
+4-OS2		& 4-HZ4		& 4-OS2-HZ4		& No danger if the start switch is open.
+Bystanders may be hit by accidental acceleration from the vehicle if the start switch is closed  \\
+4-OS2		& 4-HZ5		& 4-OS2-HZ5		& N/A \\
+4-OS2		& 4-HZ6		& 4-OS2-HZ6		& No danger if start switch is open.
+Bystanders may be hit by accidental acceleration from the vehicle if start switch is closed  \\
+4-OS2		& 4-HZ7		& 4-OS2-HZ7		& No danger, the vehicle is in standstill \\
+4-OS2		& 4-HZ8		& 4-OS2-HZ8		& Bystanders may be hit by unexpected acceleration from the vehicle\\
+
+4-OS3		& 4-HZ1		& 4-OS3-HZ1		& N/A \\
+4-OS3		& 4-HZ2		& 4-OS3-HZ2		& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront if it suddenly brakes \\
+4-OS3		& 4-HZ3		& 4-OS3-HZ3		& N/A \\
+4-OS3		& 4-HZ4		& 4-OS3-HZ4		& N/A \\
+4-OS3		& 4-HZ5		& 4-OS3-HZ5		& N/A \\
+4-OS3		& 4-HZ6		& 4-OS3-HZ6		& N/A \\
+4-OS3		& 4-HZ7		& 4-OS3-HZ7		& Unexpected deceleration, vehicle may collide with vehicle behind\\
+4-OS3		& 4-HZ8		& 4-OS3-HZ8		& Unexpected acceleration, vehicle may collide with vehicle in front\\
+ 
+4-OS4		& 4-HZ1		& 4-OS4-HZ1		& N/A
+4-OS4		& 4-HZ2		& 4-OS4-HZ2		& Tractive system is inactive leading to new breaking point, 
+which may cause collission with vehicle infront. 
+Vehicle behind may collide or be confused from sudden deceleration \\
+4-OS4		& 4-HZ3		& 4-OS4-HZ3		& N/A \\
+4-OS4		& 4-HZ4		& 4-OS4-HZ4		& N/A \\
+4-OS4		& 4-HZ5		& 4-OS4-HZ5		& N/A \\
+4-OS4		& 4-HZ6		& 4-OS4-HZ6		& N/A \\
+4-OS4		& 4-HZ7		& 4-OS4-HZ7		& Unexpected deceleration, vehicle may collide with vehicle behind\\
+4-OS4		& 4-HZ8		& 4-OS4-HZ8		& Expected acceleration, but vehicle may collide with vehicle in front \\
+
+4-OS5		& 4-HZ1		& 4-OS5-HZ1		& N/A \\
+4-OS5		& 4-HZ2		& 4-OS5-HZ2		& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront \\
+4-OS5		& 4-HZ3		& 4-OS5-HZ3		& N/A \\
+4-OS5		& 4-HZ4		& 4-OS5-HZ4		& N/A \\
+4-OS5		& 4-HZ5		& 4-OS5-HZ5		& N/A \\
+4-OS5		& 4-HZ6		& 4-OS5-HZ6		& N/A \\
+4-OS5		& 4-HZ7		& 4-OS5-HZ7		& Expected deceleration, but vehicle may collide with vehicle behind \\
+4-OS5		& 4-HZ8		& 4-OS5-HZ8		& Unexpected acceleration, vehicle may collide with vehicle in front\\
+
+4-OS6		& 4-HZ1		& 4-OS6-HZ1		& N/A \\
+4-OS6		& 4-HZ2		& 4-OS6-HZ2		& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront \\
+4-OS6		& 4-HZ3		& 4-OS6-HZ3		& N/A \\
+4-OS6		& 4-HZ4		& 4-OS6-HZ4		& N/A \\
+4-OS6		& 4-HZ5		& 4-OS6-HZ5		& N/A \\
+4-OS6		& 4-HZ6		& 4-OS6-HZ6		& N/A \\
+4-OS6		& 4-HZ7		& 4-OS6-HZ7		& Unexpected deceleration, vehicle may collide with vehicle behind\\
+4-OS6		& 4-HZ8		& 4-OS6-HZ8		& Unexpected acceleration, vehicle may collide with vehicle in front\\
+
+4-OS7		& 4-HZ1		& 4-OS7-HZ1		& N/A \\
+4-OS7		& 4-HZ2		& 4-OS7-HZ2		& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront.
+Vehicle behind may collide or be confused from sudden deceleration \\
+4-OS7		& 4-HZ3		& 4-OS7-HZ3		& N/A \\
+4-OS7		& 4-HZ4		& 4-OS7-HZ4		& N/A \\
+4-OS7		& 4-HZ5		& 4-OS7-HZ5		& N/A \\
+4-OS7		& 4-HZ6		& 4-OS7-HZ6		& N/A \\
+4-OS7		& 4-HZ7		& 4-OS7-HZ7		& Unexpected deceleration, vehicle may collide with vehicle behind \\
+4-OS7		& 4-HZ8		& 4-OS7-HZ8		& Expected acceleration, but vehicle may collide with vehicle in front\\
+
+4-OS8		& 4-HZ1		& 4-OS8-HZ1		& N/A \\
+4-OS8		& 4-HZ2		& 4-OS8-HZ2		& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront \\
+4-OS8		& 4-HZ3		& 4-OS8-HZ3		& N/A \\
+4-OS8		& 4-HZ4		& 4-OS8-HZ4		& N/A \\
+4-OS8		& 4-HZ5		& 4-OS8-HZ5		& N/A \\
+4-OS8		& 4-HZ6		& 4-OS8-HZ6		& N/A \\
+4-OS8		& 4-HZ7		& 4-OS8-HZ7		& Expected deceleration, but vehicle may collide with vehicle behind\\
+4-OS8		& 4-HZ8		& 4-OS8-HZ8		& Unexpected acceleration, vehicle may collide with vehicle in front\\
+
+4-OS9		& 4-HZ1		& 4-OS9-HZ1		& N/A \\
+4-OS9		& 4-HZ2		& 4-OS9-HZ2		& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront \\
+4-OS9		& 4-HZ3		& 4-OS9-HZ3		& N/A \\
+4-OS9		& 4-HZ4		& 4-OS9-HZ4		& N/A \\
+4-OS9		& 4-HZ5		& 4-OS9-HZ5		& N/A \\
+4-OS9		& 4-HZ6		& 4-OS9-HZ6		& N/A \\
+4-OS9		& 4-HZ7		& 4-OS9-HZ7		& Unexpected deceleration, vehicle may collide with vehicle behind \\
+4-OS9		& 4-HZ8		& 4-OS9-HZ8		& Unexpected acceleration, vehicle may collide with vehicle in front\\
+
+4-OS10		& 4-HZ1		& 4-OS10-HZ1	& N/A \\
+4-OS10		& 4-HZ2		& 4-OS10-HZ2	& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront.
+Vehicle behind may collide or be confused from sudden deceleration \\
+4-OS10		& 4-HZ3		& 4-OS10-HZ3	& N/A \\
+4-OS10		& 4-HZ4		& 4-OS10-HZ4	& N/A \\
+4-OS10		& 4-HZ5		& 4-OS10-HZ5	& N/A \\
+4-OS10		& 4-HZ6		& 4-OS10-HZ6	& N/A \\
+4-OS10		& 4-HZ7		& 4-OS10-HZ7	& Expected deceleration, but vehicle may collide with vehicle behind \\
+4-OS10		& 4-HZ8		& 4-OS10-HZ8	& Unexpected acceleration, vehicle may collide with vehicle in front\\
+
+4-OS11		& 4-HZ1		& 4-OS11-HZ1	& N/A \\
+4-OS11		& 4-HZ2		& 4-OS11-HZ2	& Tractive system is inactive leading to new breaking point, 
+which can cause collission with vehicle infront \\
+4-OS11		& 4-HZ3		& 4-OS11-HZ3	& N/A \\
+4-OS11		& 4-HZ4		& 4-OS11-HZ4	& N/A \\
+4-OS11		& 4-HZ5		& 4-OS11-HZ5	& N/A \\
+4-OS11		& 4-HZ6		& 4-OS11-HZ6	& N/A \\
+4-OS11		& 4-HZ7		& 4-OS11-HZ7	& Unexpected deceleration, vehicle may collide with vehicle behind \\
+4-OS11		& 4-HZ8		& 4-OS11-HZ8	& Expected acceleration, but vehicle may collide with vehicle in front\\
+
+4-OS12		& 4-HZ1		& 4-OS12-HZ1		& Accidental touching of HV parts \\
+4-OS12		& 4-HZ2		& 4-OS12-HZ2		& No danger, TS is off \\
+4-OS12		& 4-HZ3		& 4-OS12-HZ3		& No danger, TS is off  \\
+4-OS12		& 4-HZ4		& 4-OS12-HZ4		& Accidental touching of HV parts if TS is on \\
+4-OS12		& 4-HZ5		& 4-OS12-HZ5		& No danger, TS if off  \\
+4-OS12		& 4-HZ6		& 4-OS12-HZ6		& Accidental touching of HV parts if TS is on\\ 
+4-OS12		& 4-HZ7		& 4-OS12-HZ7		& No danger, vehicle is being pushed \\
+4-OS12		& 4-HZ8		& 4-OS12-HZ8		& N/A \\
+
+4-OS13		& 4-HZ1		& 4-OS13-HZ1	& Repairer/maintainer may touch HV parts \\
+4-OS13		& 4-HZ2		& 4-OS13-HZ2	& No danger \\
+4-OS13		& 4-HZ3		& 4-OS13-HZ3	& No danger \\
+4-OS13		& 4-HZ4		& 4-OS13-HZ4	& Repairer/maintainer may touch HV parts \\
+4-OS13		& 4-HZ5		& 4-OS13-HZ5	& No danger \\
+4-OS13		& 4-HZ6		& 4-OS13-HZ6	& Repairer/maintainer may touch HV parts \\
+4-OS13		& 4-HZ7		& 4-OS13-HZ7	& No danger \\
+4-OS13		& 4-HZ8		& 4-OS13-HZ8	& N/A
+
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Classification of hazardous events}
+% All hazardous events shall be classified, unless they are outside the scope of
+% DS/ISO 26262, e.g.  electric shock or fires not directly caused by malfunctioning
+% E/E systems.
+%
+% If there is doubt about the classification of a hazard, it should be classified 
+% conservatively, i.e. a higher ASIL classification shall be given rather than a lower.
+%
+% Required information for each hazardous event:
+%    - Estimate of severity class of potential harm from the event
+%    - Probability class of exposure of each operational situation causing the event
+%    - Estimate of controllability class of the event
+%    - An ASIL for the event using the above parameters, ensuring that the operational
+%      situations are not too granular so the exposure classes are inappropriately low
+%
+% References:
+%	DS/ISO 26262-3 section 7.4.3 -- 7.4.4.2
+%    - Severity class: DS/ISO 26262-3 Table 1
+%    - Exposure probability class: DS/ISO 26262-3 Table 2
+%    - Controllability class: DS/ISO 26262-3 Table 3
+%    - ASIL determination: DS/ISO 26262-3 Table 4
+
+\begin{center}
+\begin{tabular}{l|l|l|l|l}
+Hazardous event	& Severity	& Exposure probability	& Controllability	& ASIL	\\
+4-OS1-HZ1		& S3		& E1					& C1				& QM	\\
+4-OS1-HZ3		& S0		& E1					& C0				& N/A	\\
+4-OS1-HZ5		& S0		& E1					& C0				& N/A	\\
+4-OS1-HZ7		& S0		& E1					& C0				& N/A	\\
+
+4-OS2-HZ2		& S0		& E3					& C0				& N/A	\\
+4-OS2-HZ4		& S3		& E3					& C1				& A	\\
+4-OS2-HZ6		& S3		& E3					& C1				& A	\\
+4-OS2-HZ7		& S0		& E3					& C0				& N/A	\\
+4-OS2-HZ8		& S3		& E3					& C1				& A	\\
+
+4-OS3-HZ2		& S1		& E2					& C1 				& QM	\\
+4-OS3-HZ7		& S1		& E2					& C1				& QM	\\
+4-OS3-HZ8		& S1		& E2					& C2				& QM	\\
+
+4-OS4-HZ2		& S1		& E4					& C1				& A	\\
+4-OS4-HZ7		& S1		& E4					& C1				& A	\\
+4-OS4-HZ8		& S1		& E4					& C1				& QM	\\
+
+4-OS5-HZ2		& S1		& E2					& C1 				& QM	\\
+4-OS5-HZ7		& S1		& E2					& C1				& QM	\\
+4-OS5-HZ8		& S2		& E2					& C3				& A	\\
+
+4-OS6-HZ2		& S1		& E3					& C1				& QM	\\
+4-OS6-HZ7		& S1		& E3					& C1				& QM	\\
+4-OS6-HZ8		& S2		& E3					& C2				& A	\\
+
+4-OS7-HZ2		& S1		& E3					& C2				& QM	\\
+4-OS7-HZ7		& S1		& E3					& C2				& QM \\
+4-OS7-HZ8		& S3		& E3					& C1				& A	\\
+
+4-OS8-HZ2		& S1		& E4					& C1				& QM	\\
+4-OS8-HZ7		& S1		& E4					& C1				& QM	\\
+4-OS8-HZ8		& S2		& E4					& C3				& C	\\
+
+4-OS9-HZ2		& S1		& E3					& C1				& QM	\\
+4-OS9-HZ7		& S1		& E3					& C1				& QM	\\
+4-OS9-HZ8		& S1		& E3					& C1				& QM	\\
+
+4-OS10-HZ2		& S1		& E4					& C1				& QM	\\
+4-OS10-HZ7		& S1		& E4					& C1				& QM	\\
+4-OS10-HZ8		& S1		& E4					& C1				& QM	\\
+
+4-OS11-HZ2		& S1		& E3					& C1				& QM	\\
+4-OS11-HZ7		& S1		& E3					& C1				& QM	\\
+4-OS11-HZ8		& S1		& E3					& C1				& QM	\\
+
+4-OS12-HZ1		& S3		& E3					& C2				& C	\\
+4-OS12-HZ4		& S3		& E3					& C1				& A	\\
+4-OS12-HZ6		& S3		& E3					& C1				& A	\\
+
+4-OS13-HZ1		& S3		& E4					& C3 				& D	\\
+4-OS13-HZ4		& S3		& E4					& C2				& C	\\
+4-OS13-HZ6		& S3		& E4					& C2				& C	\\
+
+
+
+\end{tabular}
+\end{center}

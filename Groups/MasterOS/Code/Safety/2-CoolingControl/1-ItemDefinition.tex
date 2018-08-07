@@ -1,0 +1,74 @@
+\section{Item definition}
+% Reference: DS/ISO 26262-3 section 5
+
+\subsection{Pre-existing information}
+% This section is for further supporting information such as a product idea,
+% a project sketch, relevant patents, the results of pre-trials, the documentation
+% from predecessor items, relevant information on other independent items.
+% Reference: DS/ISO 26262-3 section 5.3.2
+
+The cooling system is a liquid cooling system that cools the motors and the
+motor drives container.
+The system features a pump that can be controlled from a 5v signal.
+
+\subsection{Functional requirements}
+% A functional requirement is a requirement for what the item is supposed
+% to accomplish.
+% In general, functional requirements can be expressed in the form:
+%     The item must do <requirement>
+% Functional requirements are best specified by input/output listings,
+% a mathemathical model/function or similar behaviour descriptions.
+%
+% Required information:
+%   - Purpose of the item
+%   - Functionality of the item, including operating modes and states of the item
+%   - Assumptions on expected behaviour of the item
+%
+% Reference: DS/ISO 26262-3 section 5.4.1
+
+The purpose of the item is to cool the motor and motors drives to prevent overheating.
+The item must be able to read the temperature of its reservoir and of the systems being cooled.
+The item must feature a way to control the cooling power based on the temperature readings.
+The item must always be in an active state of cooling while the tractive system is active.
+If the tractive system is disengaged while the vehicle is still on,
+the cooling system should still be active.
+The cooling system may be shut down when the temperature is low and the
+tractive system remains inactive.
+
+\subsection{Non-functional requirements}
+% A non-functional requirement is a requirement for how the item should be.
+% In general, non-functional requirements can be expressed in the form:
+%     The item must be <requirement>
+% Non-functional requirements are overall properties of the item such as quality
+% requirements and constraints.
+%
+% Required information:
+%    - Operational constraints such as prescribed behaviours for implementation
+%    - FSE rule requirements
+%
+% Recommended information:
+%    - Environmental constraints such as temperature and humidity
+%    - Behaviour achieved by similar items, if any
+%
+% Reference: DS/ISO 26262-3 section 5.4.1
+
+The electrical signal controlling the pump must be resistant to the
+environmental conditions in the back of the car.
+
+\subsection{Boundary and interfaces}
+% Required information:
+%    - Elements of the item
+%    - Assumptions about item's behaviour on other items
+%    - Interactions with other items
+%    - Functionality required by other items
+%    - Functionality required from other items
+%
+% Recommended information:
+%    - Distribution of functions among the involved systems
+%    - Operating scenarios which impact the functionality of the item
+%
+% Reference: DS/ISO 26262-3 section 5.4.2
+
+The item consists of a pump, a control unit and temperature sensors
+in the systems being cooled and the reservoir.
+The item should turn of the tractive system incase of overheating.

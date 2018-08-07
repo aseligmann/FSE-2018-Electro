@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="112.18839mm"
+   height="111.59691mm"
+   viewBox="0 0 112.18839 111.59691"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="testrig_cuttable.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="163.55219"
+     inkscape:cy="278.74754"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1061"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5">
+    <inkscape:grid
+       type="xygrid"
+       id="grid832"
+       originx="1.9999998"
+       originy="-187.00001" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2.0000001,1.5969076)">
+    <g
+       id="g1204">
+      <g
+         transform="translate(0.97399017,-2.0000001)"
+         id="g840">
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+           id="path815"
+           cx="12.5"
+           cy="14.5"
+           r="2.3675001" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+           id="path815-3"
+           cx="22.5"
+           cy="14.5"
+           r="2.3675001" />
+      </g>
+      <text
+         id="text836"
+         y="6.6194334"
+         x="2.7622883"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332"
+           y="6.6194334"
+           x="2.7622883"
+           id="tspan834"
+           sodipodi:role="line">Cooling Pumps</tspan></text>
+    </g>
+    <g
+       id="g840-6"
+       transform="translate(0.97399017,13)">
+      <circle
+         r="2.3675001"
+         cy="14.5"
+         cx="12.5"
+         id="path815-1"
+         style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994" />
+      <circle
+         r="2.3675001"
+         cy="14.5"
+         cx="22.5"
+         id="path815-3-0"
+         style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.5845215"
+       y="21.619432"
+       id="text836-4"><tspan
+         sodipodi:role="line"
+         id="tspan834-2"
+         x="2.5845215"
+         y="21.619432"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">Brake Lights</tspan></text>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+       id="path815-1-2"
+       cx="13.47399"
+       cy="42.5"
+       r="2.3675001" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.5845215"
+       y="36.619434"
+       id="text836-4-3"><tspan
+         sodipodi:role="line"
+         id="tspan834-2-8"
+         x="2.5845215"
+         y="36.619434"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">Ready To Drive Sound</tspan></text>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+       id="path815-1-6"
+       cx="13.47399"
+       cy="57.5"
+       r="2.3675001" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.9669271"
+       y="51.619434"
+       id="text836-4-5"><tspan
+         sodipodi:role="line"
+         id="tspan834-2-4"
+         x="2.9669271"
+         y="51.619434"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">APPS/Brake Plausibility</tspan></text>
+    <g
+       id="g840-6-99"
+       transform="translate(0.97399017,58)">
+      <circle
+         r="2.3675001"
+         cy="14.5"
+         cx="12.5"
+         id="path815-1-3"
+         style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994" />
+      <circle
+         r="2.3675001"
+         cy="14.5"
+         cx="22.5"
+         id="path815-3-0-6"
+         style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.5845215"
+       y="66.619431"
+       id="text836-4-0"><tspan
+         sodipodi:role="line"
+         id="tspan834-2-5"
+         x="2.5845215"
+         y="66.619431"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">Motor Control Signal</tspan></text>
+    <circle
+       r="2.3675001"
+       cy="87.5"
+       cx="13.47399"
+       id="path815-1-9"
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994" />
+    <text
+       id="text836-4-35"
+       y="81.619431"
+       x="3.0124023"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332"
+         y="81.619431"
+         x="3.0124023"
+         id="tspan834-2-1"
+         sodipodi:role="line">Tractive System Active</tspan></text>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+       id="path815-2"
+       cx="13.47399"
+       cy="102.5"
+       r="2.3675001" />
+    <g
+       id="g1285"
+       transform="translate(0.97399145,72.388332)">
+      <g
+         id="g1274">
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+           id="path1255"
+           cx="62.526009"
+           cy="-63.888332"
+           r="3.3675001" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+           id="path1255-1"
+           cx="87.526009"
+           cy="-63.888332"
+           r="3.3675001" />
+      </g>
+      <text
+         id="text1278"
+         y="-62.34734"
+         x="69.586548"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332"
+           y="-62.34734"
+           x="69.586548"
+           id="tspan1276"
+           sodipodi:role="line">BPPS</tspan></text>
+    </g>
+    <g
+       transform="translate(0.97399145,87.388332)"
+       id="g1285-6">
+      <g
+         id="g1328">
+        <g
+           id="g1321">
+          <circle
+             r="3.3675001"
+             cy="-63.888332"
+             cx="62.526009"
+             id="path1255-4"
+             style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994" />
+          <circle
+             r="3.3675001"
+             cy="-63.888332"
+             cx="87.526009"
+             id="path1255-1-1"
+             style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="69.781883"
+           y="-62.34734"
+           id="text1278-0"><tspan
+             sodipodi:role="line"
+             id="tspan1276-4"
+             x="69.781883"
+             y="-62.34734"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">APPS</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.7622883"
+       y="96.619431"
+       id="text836-6"><tspan
+         sodipodi:role="line"
+         id="tspan834-4"
+         x="2.7622883"
+         y="96.619431"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">BSPD Active</tspan></text>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+       id="path1361"
+       cx="63.5"
+       cy="38.5"
+       r="3.3675001" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="70.373466"
+       y="40.040993"
+       id="text1365"><tspan
+         sodipodi:role="line"
+         id="tspan1363"
+         x="70.373466"
+         y="40.040993"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">Motor Current</tspan></text>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.26499993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+       id="path1380"
+       cx="88.5"
+       cy="57.543209"
+       r="5.8674998" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="71.82402"
+       y="70.214287"
+       id="text1384"><tspan
+         sodipodi:role="line"
+         id="tspan1382"
+         x="71.82402"
+         y="70.214287"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">Tractive System</tspan></text>
+    <g
+       id="g1420">
+      <g
+         id="g1408">
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+           id="path1386"
+           cx="63.5"
+           cy="82"
+           r="4.8674998" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+           id="path1388"
+           cx="63.5"
+           cy="61"
+           r="1.8674999" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.99999994"
+           id="path1388-2"
+           cx="63.5"
+           cy="103"
+           r="1.8674999" />
+      </g>
+      <text
+         id="text1412"
+         y="93.119431"
+         x="54.627159"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332"
+           y="93.119431"
+           x="54.627159"
+           id="tspan1410"
+           sodipodi:role="line">Steering</tspan></text>
+    </g>
+  </g>
+</svg>

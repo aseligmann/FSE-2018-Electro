@@ -1,0 +1,78 @@
+\section{Item definition}
+% Reference: DS/ISO 26262-3 section 5
+
+\subsection{Pre-existing information}
+% This section is for further supporting information such as a product idea,
+% a project sketch, relevant patents, the results of pre-trials, the documentation
+% from predecessor items, relevant information on other independent items.
+% Reference: DS/ISO 26262-3 section 5.3.21
+The tractice control system consists of a pedal, a computation system and steering system.
+Furthermore extern items like motor controllers, motors and motor encoders are used.
+
+\subsection{Functional requirements}
+% A functional requirement is a requirement for what the item is supposed
+% to accomplish.
+% In general, functional requirements can be expressed in the form:
+%     The item must do <requirement>
+% Functional requirements are best specified by input/output listings,
+% a mathemathical model/function or similar behaviour descriptions.
+%
+% Required information:
+%   - Purpose of the item
+%   - Functionality of the item, including operating modes and states of the item
+%   - Assumptions on expected behaviour of the item
+%
+% Reference: DS/ISO 26262-3 section 5.4.1
+The tractive system has a red light that blinks in a frequency of 2 and 5 HZ when the tractive system is active.
+When the tractive system is deactivated a green light will be illuminated.
+
+The purpose of the speed pedal is to generate a speed reference based on pedal position.
+
+Whenever the pedal is not pressed the motors should not contribute to accelerating the vehicle.
+Whenever the pedal is pressed the motors should contribute to accelerating the vehicle.
+The further the pedal is pressed the more the motors should contribute to accelerating the vehicle.
+
+The pedal system must always operate when the tractive system is active.
+
+\subsection{Non-functional requirements}
+% A non-functional requirement is a requirement for how the item should be.
+% In general, non-functional requirements can be expressed in the form:
+%     The item must be <requirement>
+% Non-functional requirements are overall properties of the item such as quality
+% requirements and constraints.
+%
+% Required information:
+%    - Operational constraints such as prescribed behaviours for implementation
+%    - FSE rule requirements
+%
+% Recommended information:
+%    - Environmental constraints such as temperature and humidity
+%    - Behaviour achieved by similar items, if any
+%
+% Reference: DS/ISO 26262-3 section 5.4.1
+The tractive system must not have a voltage greater than 600V or exceed a power greater than 80KW.
+Additionally the system must have power measuring points.
+
+The computation system must not exceed temperatures above 80°C and should not shutdown in harsh environmental conditions.
+
+The speed pedal and steering wheel system must be resistant to the environmental conditions inside the cockpit.
+
+
+\subsection{Boundary and interfaces}
+% Required information:
+%    - Elements of the item
+%    - Assumptions about item's behaviour on other items
+%    - Interactions with other items
+%    - Functionality required by other items
+%    - Functionality required from other items
+%
+% Recommended information:
+%    - Distribution of functions among the involved systems
+%    - Operating scenarios which impact the functionality of the item
+%
+% Reference: DS/ISO 26262-3 section 5.4.2
+
+The speed pedal system must output the speed pedal position to the computation item and the high voltage control item.
+The steering wheel system must output the steering wheel position to computation item.
+The computation system must output the motor voltage references to the motor controllers.
+

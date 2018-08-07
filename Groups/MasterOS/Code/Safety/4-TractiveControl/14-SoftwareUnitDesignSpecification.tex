@@ -1,0 +1,69 @@
+\section{Software unit design specification}
+% Reference: DS/ISO 26262-6 section 8.4.2 -- 8.4.4
+%
+% Pre-requisites:
+%    - Software architectural design specification
+%    - Software safety requirements specification
+%    - Software verification report
+%
+% Reference: DS/ISO 26262-6 section 8.3.1
+
+\subsection{Pre-existing information}
+% The following information can be considered:
+%    - Technical safety concept
+%    - System design specification
+%
+% Reference: DS/ISO 26262-6 section 8.3.2
+
+\subsection{SOFTWARE UNIT}
+% The requirements of this clause shall be complied with if the software unit
+% implements safety requirements or interacts heavily with units that do.
+%
+% The software unit design shall be described using the following notations,
+% depending on the ASIL of the safety requirements it implements:
+%    - Natural language
+%    - Informal notations
+%    - Semi-formal notations
+%    - Formal notations
+% In case of model-based development with automatic code generation, the
+% methods for representing the software unit design are applied to the model.
+%
+% The specification of the software units shall describe the functional behaviour
+% and the internal design to the level of detail necessary for their implementation.
+%
+% The software unit design and implementation at the source code level shall
+% achieve the following properties:
+%    - Correct order of execution of subprograms and functions
+%    - Consistency of interfaces between the software units
+%    - Correctness of data flow and control flow between and within software units
+%    - Simplicity
+%    - Readability and comprehensibility
+%    - Robustness (e.g. prevention of implausible values, division by zero, etc.)
+%    - Suitability for software modification/maintainability
+%    - Testability
+% Depending on the ASIL of the software unit, these properties shall be achieved
+% using the following design principles:
+%    - One entry and one exit point in subprograms and functions
+%    - No dynamic objects or variables, or online test during their creation
+%    - Initialization of variables
+%    - No multiple use of variable names
+%    - Avoid global variables or justify their usage
+%    - Limit use of pointers
+%    - No implicit type conversions
+%    - No hidden data flow or control flow
+%    - No unconditional jumps
+%    - No recursion
+% Some of these principles may not be applicable if using graphical or assembler
+% programming.
+% 
+%
+% Required information:
+%    - Specification of software unit
+%    - Implementation of software unit
+%
+% Reference:
+%    - DS/ISO 26262-6 section 8.4.1 -- 8.4.4
+%    - Software unit design notations: DS/ISO 26262-6 Table 7
+%    - Software unit design principles: DS/ISO 26262-6 Table 8
+
+% <<< Repeat this section for each software unit >>>

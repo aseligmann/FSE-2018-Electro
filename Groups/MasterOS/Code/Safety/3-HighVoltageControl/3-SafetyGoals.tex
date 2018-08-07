@@ -1,0 +1,63 @@
+\section{Safety goals}
+% Reference: DS/ISO 26262-3 section 7.4.4.3 -- 7.4.4.6
+%
+% Pre-requisites:
+%    - Item definition
+%    - Hazard analysis and risk assessment
+%
+% The item is evaluated based ONLY on the item definition, i.e. WITHOUT considering
+% internal safety mechanisms that are already implemented or are planned.
+% Safety mechanisms that are intended to be implemented are instead part of the
+% functional safety concept.
+% 
+% Reference: DS/ISO 26262-3 section 7.4.1
+
+\subsection{Pre-existing information}
+% This section is for further supporting information such as
+%    - Change impact analysis if applicable (only for existing items being changed)
+%    - Relevant information on other independent items
+%
+% Reference: DS/ISO 26262-3 section 7.3.2
+
+\subsection{HAZARDOUS EVENT NAME}
+% Every hazardous event with an ASIL from the hazard analysis shall have a safety goal
+% defined to prevent the malfunction leading to the event.
+% If several hazardous events cause very similar safety goals, the safety goals may be
+% combined into a single safety goal.
+%
+% Safety goals are top-level safety requirements for the item. They are not expressed
+% in terms of technological solutions but in terms of functional objectives cf. the 
+% item definition.
+% The safety goals will lead to functional safety requirements required to avoid risk
+% of hazardous events later on.
+%
+% Each safety goal shall be assigned the ASIL of the corresponding hazardous event.
+% If multiple safety goals are combined, the highest ASIL must be assigned.
+%
+% If a safety goal can be achieved by transitioning to or maintaining one or more
+% safe states, then those safe states shall be specified.
+% A safe state can be e.g. that the item is turned off or that the vehicle is stationary.
+%
+% Required information:
+%    - Safety goals for the hazardous event as described above
+%    - For each safety goal:
+%        - Safe states to transition to/maintain
+%    - Each safety goal must be:
+%        - Unambigous
+%        - Comprehensible
+%        - Atomic
+%        - Internally consistent
+%        - Feasible
+%        - Verifiable
+%        - Uniquely identifiable by some ID
+%    - The set of safety goals must be:
+%        - Complete
+%        - Externally consistent
+%        - Without duplication of information
+%        - Maintainable
+%
+% References:
+%    - Safety goals: DS/ISO 26262-3 section 7.4.4.3 -- 7.4.4.6
+%    - Specification of safety requirements: DS/ISO 26262-8 section 6.4
+%
+% <<< Repeat this section for each hazardous event >>>

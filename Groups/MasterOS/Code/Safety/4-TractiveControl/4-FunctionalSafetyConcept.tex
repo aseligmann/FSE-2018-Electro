@@ -1,0 +1,94 @@
+\section{Functional safety concept}
+% Reference: DS/ISO 26262-3 section 8
+%
+% Pre-requisites:
+%    - Item definition
+%    - Hazard analysis and risk assessment
+%    - Safety goals
+% 
+% Reference: DS/ISO 26262-3 section 8.3.1
+
+\subsection{Pre-existing information}
+% The following information can be considered:
+%    - Prior architectural assumptions (non-safety related)
+%
+% Reference: DS/ISO 26262-3 section 8.3.2
+
+\subsection{Derivation of functional safety requirements}
+% Functional safety requirements must be specified following DS/ISO 26262-8 section 6.
+%
+% A functional safety requirement specifies the safety measures and mechanisms that are
+% required to comply with the safety goals.
+% The functional safety concept is the set of functional safety requirements and the
+% architectural elements of the item that they are assigned to.
+% The functional safety concept is concerned with:
+%    - Fault detection and failure mitigation
+%    - Transitioning to a safe state after faults have been detected
+%    - Fault tolerance mechanisms, where faults do not lead directly to violation of
+%      the safety goals and a safe state is maintained (possibly with degradation)
+%    - Fault detection and driver warning to reduce risk exposure time
+%    - Arbitration logic to select "worst" fault in case of several simultaneous control
+%      requests by different functions
+%
+% The functional safety requirements are derived from the safety goals and safe states,
+% taking into account any prior architectural assumptions.
+% One functional safety requirement can be valid for several safety goals.
+%
+% If a safe state cannot be reached by transition within an acceptable time interval,
+% an emergency operation must be specified (e.g. if immediately switching off a system
+% would not help, it might help to have it function in a degraded state).
+%
+% If assumptions are made about the reaction of the driver or other people at risk, the
+% assumed actions must be specified in the functional safety concept and the controls
+% available to the driver to do this must be specified.
+%
+% Required information:
+%    - At least one functional safety requirement for each safety goal, specified by 
+%      considering:
+%        - Operating modes of the item
+%        - Time interval of fault tolerance, i.e. how long before hazardous event occurs
+%        - Safe states of the item (from safety goals)
+%        - Emergency operation interval
+%        - Functional redundancies (fault tolerance)
+%
+% Reference: DS/ISO 26262-3 section 8.4.2
+
+
+\begin{description}
+\item [4-FR1-C] To prevent violation of 4-SG1-A and 4-SG2-C, the blink light and the inactiv light should not be in the same state. If this happens the tractive system should shut down imediately.
+
+\item [4-FR2-C] To prevent violation of 4-SG3-C a break system plausibility device should be installed, which shutdowns the tractive system if hard breaking is taking place while accelerating. Further more the speed pedal must have 2 sensors with different offset and/or slope. None of these may reach 100\% voltage or 0\% voltage. If one does not work the tractive system should shut down.
+
+\item [4-FR3-C] To prevent violation of 4-SG4-A, breaks and steeringwheel should be mechanical and the breaking light circuit should be normally closed
+
+\item [4-FR4-C] To prevent violation of 4-SG5-C the exposed parts of hte tractive system should be isolated from touching.
+
+\item [4-FR5-C] To prevent violation of 4-SG6-D a mechanical switch for tractive system should be used to insure that no current can run through the tractive system.
+
+
+\end{description}
+
+
+\subsection{Allocation of functional safety requirements}
+% Each functional safety requirement shall be allocated to the elements of the prior
+% architectural assumptions.
+%
+% When allocating, the ASIL is inherited from the associated safety goal.
+% If several functional safety requirements are allocated to the same architectural
+% element, the highest ASIL is inherited unless it can be argued that the safety
+% requirements are independent in the architecture.
+% 
+% If an item consists of more than one system, the functional safety requirements
+% for the individual systems and their interfaces shall be specified.
+%
+% If functional safety requirements are implemented by external measures, the safety
+% requirements that are implemented shall be derived and communicated.
+% Additionally, the safety requirements of the interfaces with external measures
+% shall be specified.
+%
+% Required information:
+%    - Allocation of each functional safety requirement to elements of the architecture
+%    - ASIL for development of each functional safety requirement
+%    - Functional safety requirements of interfaces to external measures/internal systems
+%
+% Reference: DS/ISO 26262-3 section 8.4.3

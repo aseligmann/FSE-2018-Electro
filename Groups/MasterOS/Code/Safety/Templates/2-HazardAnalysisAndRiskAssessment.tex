@@ -1,0 +1,77 @@
+\section{Hazard analysis and risk assessment}
+% Reference: DS/ISO 26262-3 section 7.4.1.1 -- 7.4.4.2
+%
+% Pre-requisites:
+%    - Item definition
+%
+% The item is evaluated based ONLY on the item definition, i.e. WITHOUT considering
+% internal safety mechanisms that are already implemented or are planned.
+% Safety mechanisms that are intended to be implemented are instead part of the
+% functional safety concept.
+% 
+% Reference: DS/ISO 26262-3 section 7.4.1
+
+\subsection{Pre-existing information}
+% This section is for further supporting information such as
+%    - Change impact analysis if applicable (only for existing items being changed)
+%    - Relevant information on other independent items
+%
+% Reference: DS/ISO 26262-3 section 7.3.2
+
+\subsection{Situation analysis}
+% The operational situations and operating modes in which an item's malfunctioning
+% behaviour will result in a hazardous event are described.
+% Consider both situations when the vehicle is correctly used AND when it is
+% incorrectly used in a foreseeable manner.
+% It is NOT necessary to consider situations in which the item is not expected to
+% behave safely, i.e. when driving off-road.
+%
+% Required information:
+%   - List of situations/modes in which the item may malfunction in a hazardous way
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.1
+
+\subsection{Hazard identification}
+% Identify hazards systematically using e.g. brainstorming, FMEA and tests.
+%
+% A hazard is a potential source of harm caused by malfunctioning behaviour.
+% A hazard is defined in terms of conditions or behaviour that can be observed at
+% the vehicle level assuming every other independent item/system is functioning
+% correctly.
+% A hazard can have many potential causes related to the implementation of the item,
+% but these do NOT need to be considered in this hazard analysis and risk assessment,
+% which is derived from a functional behaviour of the item.
+
+% A hazardous event is a combination of a hazard and an operational situation.
+% A hazardous event may have several simultaneous consequences, which must be
+% considered together.
+%
+% Required information:
+%    - List of hazards that can be observed at the vehicle level
+%    - List of hazardous events for combinations of hazards and operational situations
+%    - The consequences of each hazardous event
+%
+% Reference: DS/ISO 26262-3 section 7.4.2.2
+% Definitions: DS/ISO 26262-1 term 1.57 -- 1.59
+
+\subsection{Classification of hazardous events}
+% All hazardous events shall be classified, unless they are outside the scope of
+% DS/ISO 26262, e.g.  electric shock or fires not directly caused by malfunctioning
+% E/E systems.
+%
+% If there is doubt about the classification of a hazard, it should be classified 
+% conservatively, i.e. a higher ASIL classification shall be given rather than a lower.
+%
+% Required information for each hazardous event:
+%    - Estimate of severity class of potential harm from the event
+%    - Probability class of exposure of each operational situation causing the event
+%    - Estimate of controllability class of the event
+%    - An ASIL for the event using the above parameters, ensuring that the operational
+%      situations are not too granular so the exposure classes are inappropriately low
+%
+% References:
+%	DS/ISO 26262-3 section 7.4.3 -- 7.4.4.2
+%    - Severity class: DS/ISO 26262-3 Table 1
+%    - Exposure probability class: DS/ISO 26262-3 Table 2
+%    - Controllability class: DS/ISO 26262-3 Table 3
+%    - ASIL determination: DS/ISO 26262-3 Table 4

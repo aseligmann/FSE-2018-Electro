@@ -1,0 +1,79 @@
+# Created by Ultra Librarian Gold 5.3.88 Copyright © 1999-2010
+#  Premier Farnell
+
+Grid mil;
+Set Wire_Bend 2;
+
+
+Edit 'TO254P457X1016X2222-3P.pac';
+Change Drill 50;
+Pad '1' Square 0 R0 (-200 -50);
+Change Drill 50;
+Pad '2' Round 0 R0 (-100 -50);
+Change Drill 50;
+Pad '3' Round 0 R0 (0 -50);
+Layer 39;
+Wire 6 (-318 75) (-318 -125);
+Wire 6 (-318 -125) (118 -125);
+Wire 6 (118 -125) (118 75);
+Wire 6 (118 75) (-318 75);
+Layer 39;
+Wire 6 (-318 75) (-318 -125) (118 -125) (118 75);
+Layer 21;
+Wire 6 (-308 -115) (108 -115);
+Wire 6 (108 -115) (108 65);
+Wire 6 (108 65) (-308 65);
+Wire 6 (-308 65) (-308 -115);
+Wire 6 (-374 -50) -180 (-390 -50);
+Wire 6 (-390 -50) -180 (-374 -50);
+Layer 51;
+Wire 6 (-308 -115) (108 -115);
+Wire 6 (108 -115) (108 65);
+Wire 6 (108 65) (-308 65);
+Wire 6 (-308 65) (-308 -115);
+Wire 6 (-374 -50) -180 (-390 -50);
+Wire 6 (-390 -50) -180 (-374 -50);
+Layer 25;
+Change Size 82;
+Change Ratio 10;
+Text '>NAME' SR0 (-284 77);
+Layer 27;
+Change Size 82;
+Change Ratio 10;
+Text '>VALUE' SR0 (-331 -207);
+
+Edit 'TL783CKCSE3..sym';
+Layer 94;
+Pin 'INPUT' In None Middle R0 Both 0 (-900 0);
+Pin 'OUTPUT' Out None Middle R180 Both 0 (900 0);
+Pin 'ADJ' Pas None Middle R90 Both 0 (0 -400);
+Wire 16 (-700 200) (-700 -200);
+Wire 16 (-700 -200) (700 -200);
+Wire 16 (700 -200) (700 200);
+Wire 16 (700 200) (-700 200);
+Layer 97;
+Layer 95;
+Change Size 82;
+Change Ratio 10;
+Text '>NAME' SR0 (-191 267);
+Layer 96;
+Change Size 82;
+Change Ratio 10;
+Text '>VALUE' SR0 (-213 -522);
+
+Edit 'TL783CKCSE3..dev';
+Prefix 'U';
+
+Value Off;
+Add TL783CKCSE3. 'A' Next  0 (0 0);
+Package 'TO254P457X1016X2222-3P';
+Technology '';
+Description 'IC,HIGH-VOLTAGE ADJUSTABLE REGULATOR,TO220-3';
+Attribute Supplier 'TEXAS INSTRUMENTS';
+Attribute Package 'TO220-3';
+Attribute OC_NEWARK '10M0615';
+Attribute OC_FARNELL '1703396	';
+Attribute MPN 'TL783CKCSE3.';
+Connect 'A.ADJ' '1';
+Connect 'A.OUTPUT' '2';
+Connect 'A.INPUT' '3';

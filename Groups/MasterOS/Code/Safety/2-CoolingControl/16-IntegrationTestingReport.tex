@@ -1,0 +1,168 @@
+\section{Integration testing report}
+% Reference: DS/ISO 26262-4 section 8
+%
+% Pre-requisites:
+%    - Safety goals
+%    - Functional safety concept
+%    - Technical safety concept
+%    - System design specification
+%
+% Reference: DS/ISO 26262-4 section 8.3.1
+
+\subsection{Pre-existing information}
+% The following information can be considered:
+%    - Vehicle architecture
+%    - Technical safety concepts of other vehicle systems
+%
+% Reference: DS/ISO 26262-4 section 8.3.2
+
+\subsection{Hardware-software integration testing}
+% The developed hardware and software shall be integrated.
+% The use of production-intent hardware and software is preferred, but modified
+% hardware and software may be used where necessary for particular tests.
+%
+% The correct implementation of the technical safety requirements at the
+% hardware-software level shall be demonstrated using the following methods,
+% depending on the assigned ASIL:
+%    - Requirements-based test against functional and non-functional requirements
+%    - Fault injection test (via special test interface or special hardware)
+%    - Back-to-back comparison test with model (if possible)
+%
+% The functional performance and timing of the safety mechanisms at the
+% hardware-software level shall be demonstrated using the following methods,
+% depending on the assigned ASIL:
+%    - Back-to-back comparison test with model (if possible)
+%    - Performance test of timing, power output etc. on intended hardware
+%
+% The consistent and correct implementation of the external and internal interfaces
+% at the hardware-software level shall be demonstrated using the following methods,
+% depending on the assigned ASIL:
+%    - Test of external interfaces
+%    - Test of internal interfaces
+%    - Interface consistency check
+%
+% The effectiveness of the hardware fault detection mechanisms' diagnostic coverage
+% shall be demonstrated using the following methods, depending on the assigned ASIL:
+%    - Fault injection test (via special test interface or special hardware)
+%    - Error guessing test (i.e. guessing what errors may happen and testing them)
+%
+% The level of robustness of the elements at the hardware-software level shall be
+% demonstrated using the following methods, depending on the assigned ASIL:
+%    - Resource usage test (either static or dynamic)
+%    - Stress test (e.g. extreme temperatures, mechanical shocks, overloads, etc.)
+%
+% Required information:
+%    - Results of technical safety requirements implementation tests
+%    - Results of safety mechanism tests
+%    - Results of interface tests
+%    - Results of safety mechanism coverage tests
+%    - Results of robustness tests
+%
+% Reference:
+%    - Technical safety requirement implementation tests: DS/ISO 26262-4 Table 5
+%    - Safety mechanism tests: DS/ISO 26262-4 Table 6
+%    - Interface tests: DS/ISO 26262-4 Table 7
+%    - Safety mechanism coverage tests: DS/ISO 26262-4 Table 8
+%    - Robustness tests: DS/ISO 26262-4 Table 9
+
+\subsection{System integration testing}
+% The individual elements in the system shall be integrated in accordance with the
+% system design.
+%
+% The correct implementation of the functional and technical requirements at the 
+% system level shall be demonstrated using the following methods, depending on
+% the assigned ASIL:
+%    - Requirements-based test against functional and non-functional requirements
+%    - Fault injection test (via special test interface or special hardware)
+%    - Back-to-back comparison test with model (if possible)
+%
+% The functional performance and timing of the safety mechanisms at the
+% system level shall be demonstrated using the following methods, depending on
+% the assigned ASIL:
+%    - Back-to-back comparison test with model (if possible)
+%    - Performance test of whole system response times, actuator strength, etc.
+%
+% The consistent and correct implementation of the external and internal interfaces
+% at the system level shall be demonstrated using the following methods, depending
+% on the assigned ASIL:
+%    - Test of external interfaces
+%    - Test of internal interfaces
+%    - Interface consistency check
+%    - Test of interaction/communication between systems and system elements
+%
+% The effectiveness of the safety mechanisms' failure coverage shall be demonstrated
+% using the following methods, depending on the assigned ASIL:
+%    - Fault injection test (via special test interface or special elements)
+%    - Error guessing test (i.e. guessing what errors may happen and testing them)
+%    - Test derived from field experience
+%
+% The level of robustness at the system level shall be demonstrated using the
+% following methods, depending on the assigned ASIL:
+%    - Resource usage test (typically dynamic e.g. in a prototype or lab setup)
+%    - Stress test (e.g. extreme temperatures, extreme user inputs, high loads, etc.)
+%    - Test for interference resistance and robustness (e.g. EMC, EMI, and ESD tests)
+%
+% Required information:
+%    - Results of requirements implementation tests
+%    - Results of safety mechanism tests
+%    - Results of interface tests
+%    - Results of safety mechanism coverage tests
+%    - Results of robustness tests
+%
+% Reference:
+%    - Requirement implementation tests: DS/ISO 26262-4 Table 10
+%    - Safety mechanism tests: DS/ISO 26262-4 Table 11
+%    - Interface tests: DS/ISO 26262-4 Table 12
+%    - Safety mechanism coverage tests: DS/ISO 26262-4 Table 13
+%    - Robustness tests: DS/ISO 26262-4 Table 14
+
+\subsection{Vehicle integration and testing}
+% Each item shall be integrated into the vehicle and the integration shall be 
+% tested.
+%
+% The correct implementation of the functional and technical requirements at the 
+% vehicle level shall be demonstrated using the following methods:
+%    - Requirements-based test against functional and non-functional requirements
+%    - Fault injection test (via special test interface or special hardware)
+%    - Long-term test
+%    - User test under real-life conditions
+%
+% The functional performance and timing of the safety mechanisms at the
+% vehicle level shall be demonstrated using the following methods, depending on
+% the assigned ASIL:
+%    - Performance test of whole system response times, actuator strength, etc.
+%    - Long-term test
+%    - User test under real-life conditions
+%
+% The consistent and correct implementation of the external interfaces at the system
+% level shall be demonstrated using the following methods, depending on the
+% assigned ASIL:
+%    - Test of external interfaces
+%    - Test of interaction/communication between systems during runtime
+%
+% The effectiveness of the safety mechanisms' failure coverage shall be demonstrated
+% at the vehicle level, using the following methods, depending on the assigned ASIL:
+%    - Fault injection test (via special test interface or special elements)
+%    - Error guessing test (i.e. guessing what errors may happen and testing them)
+%    - Test derived from field experience
+%
+% The level of robustness at the vehicle level shall be demonstrated using the
+% following methods, depending on the assigned ASIL:
+%    - Resource usage test (typically dynamic e.g. in a prototype or lab setup)
+%    - Stress test (e.g. extreme temperatures, extreme user inputs, high loads, etc.)
+%    - Test for interference resistance and robustness (e.g. EMC, EMI, and ESD tests)
+%    - Long-term test
+%
+% Required information:
+%    - Results of requirements implementation tests
+%    - Results of safety mechanism tests
+%    - Results of external interface tests
+%    - Results of safety mechanism coverage tests
+%    - Results of robustness tests
+%
+% Reference:
+%    - Requirement implementation tests: DS/ISO 26262-4 Table 15
+%    - Safety mechanism tests: DS/ISO 26262-4 Table 16
+%    - Interface tests: DS/ISO 26262-4 Table 17
+%    - Safety mechanism coverage tests: DS/ISO 26262-4 Table 18
+%    - Robustness tests: DS/ISO 26262-4 Table 19

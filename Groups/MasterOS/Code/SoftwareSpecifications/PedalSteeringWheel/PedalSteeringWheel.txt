@@ -1,0 +1,102 @@
+CAN-messages:
+	Sends signals:
+		Normal operation (ID 110, 3 bytes)
+			1 byte brake pedal position
+			1 byte accelerator position
+			1 byte steering wheel position
+		Error (ID 10, 1 byte)
+			Bit 0: Brake measurement mismatch
+			Bit 1: Accelerator measurement mismatch
+			Bit 2: Brake overtravel
+			Bit 3: Brake undertravel
+			Bit 4: Accelerator overtravel
+			Bit 5: Accelerator undertravel
+			Bit 6: Brake measurement connection failure
+			Bit 7: Accelerator measurement connection failure
+
+	Receives signals from ID 120:
+		Calibration
+
+Behaviour:
+	State machine
+		States:
+			Normal operation
+			Error
+			Calibration
+
+		Transitions from normal operation:
+			when packet from ID 120:
+				transition to calibration
+			
+			bpp1 = measure brake pedal position1
+			bpp2 = measure brake pedal position2
+			app1 = measure accelerator position1
+			app2 = measure accelerator position2
+			swp = measure steering wheel position
+
+			error = 0			
+			if (bpp1 == pullup) | (bpp2 == pullup) then
+				set error |= 0b00000010
+			if (app1 == pullup) | (app2 == pullup) then
+				set error |= 0b00000001
+			if bpp1 != bpp2 then
+				set error |= 0b10000000
+			if app1 != app2 then
+				set error |= 0b01000000
+			if bpp1 > 95 then
+				set error |= 0b00100000
+			if bpp1 < 5 then
+				set error |= 0b00010000
+			if app1 > 95 then
+				set error |= 0b00001000
+			if app1 < 5 then
+				set error |= 0b00000100
+
+			if error != 0 then
+				send packet ID 10 containing error
+				transition to error
+			else
+				send packet ID 110 containing bpp1 << 16 & app1 << 8 & swp
+				stay in normal operation
+
+		Transitions from calibration:
+			do calibration routine (to be elaborated)
+			if error then
+				transition to error
+			else
+				transition to normal operation
+
+		Transitions from error:
+			when packet from ID 120:
+				transition to calibration
+			
+			bpp1 = measure brake pedal position1
+			bpp2 = measure brake pedal position2
+			app1 = measure accelerator position1
+			app2 = measure accelerator position2
+			swp = measure steering wheel position
+
+			error = 0			
+			if (bpp1 == pullup) | (bpp2 == pullup) then
+				set error |= 0b00000010
+			if (app1 == pullup) | (app2 == pullup) then
+				set error |= 0b00000001
+			if bpp1 != bpp2 then
+				set error |= 0b10000000
+			if app1 != app2 then
+				set error |= 0b01000000
+			if bpp1 > 95 then
+				set error |= 0b00100000
+			if bpp1 < 5 then
+				set error |= 0b00010000
+			if app1 > 95 then
+				set error |= 0b00001000
+			if app1 < 5 then
+				set error |= 0b00000100
+
+			if error != 0 then
+				send packet ID 10 containing error
+				stay in error
+			else
+				send packet ID 110 containing bpp1 << 16 & app1 << 8 & swp
+				transition to normal operation

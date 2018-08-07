@@ -1,0 +1,105 @@
+Pedal/steering wheel position
+	Sends signals:
+		Normal operation (ID 110, 3 bytes)
+			1 byte brake pedal position
+			1 byte accelerator position
+			1 byte steering wheel position
+		Error (ID 10, 2 byte)
+			Bit  0: Brake measurement mismatch
+			Bit  1: Accelerator measurement mismatch
+			Bit  2: Brake overtravel
+			Bit  3: Brake undertravel
+			Bit  4: Accelerator overtravel
+			Bit  5: Accelerator undertravel
+			Bit  6: Brake measurement connection failure
+			Bit  7: Accelerator measurement connection failure
+			Bit  8: Brake pedal short circuit
+			Bit  9: Accelerator short circuit
+			Bit 10: Steering sensor connection failure
+			Bit 11: Steering sensor overtravel
+			Bit 12: Steering sensor undertravel
+			Bit 13: Steering sensor short circuit
+
+	Receives signals from ID 120:
+		Calibration
+
+Audiovisual signaling
+	Sends no signals.
+
+	Receives signals from ID 110:
+		Normal operation
+
+	Receives signals from ID 10:
+		Error
+
+	Receives signals from ID 220:
+		Ready to drive
+
+
+Cooling control
+	Sends signals:
+		Normal operation (ID 710, 1 byte)
+			1 byte cooling control signal
+
+	Receives signals from ID 780:
+		Motor status signal
+
+Master
+	Sends signals:
+		Calibration (ID 120, no message)
+
+		Ready to drive (ID 220, no message)
+
+		Motor status signal (ID 780, 2 byte)
+			1 byte motor power
+			1 byte motor temperature
+
+	Receives signals from ID 10:
+		Error
+
+	Receives signals from ID 110:
+		Normal operation
+
+	Receives signals from ID 710:
+		Normal operation    ///not anymore
+
+	Receives signals from ID 810:
+		Normal operation
+
+	Receives signals from ID 4:
+		Error
+
+GLVS BMS
+	Sends signals:
+		Normal operation (ID 810, 9 byte)
+			1 byte temperature sensor 1
+			1 byte temperature sensor 2
+			1 byte cell1 voltage
+			1 byte cell2 voltage
+			1 byte cell3 voltage
+			1 byte cell4 voltage
+			1 byte cell5 voltage
+			1 byte cell6 voltage
+		Error (ID 4, 9 byte)
+			1 byte temperature sensor 1
+			1 byte temperature sensor 2
+			1 byte cell1 voltage
+			1 byte cell2 voltage
+			1 byte cell3 voltage
+			1 byte cell4 voltage
+			1 byte cell5 voltage
+			1 byte cell6 voltage
+
+Dashboard
+	Receives signals from ID 20, 3 bytes:
+		byte 1 (led status)
+			Bit  0: Tractive System Indicator
+			Bit  1: RTD Indicator
+			Bit  2: AMS error Indicator
+			Bit  3: IMD error Indicator
+		byte 2: Low Voltage Indicator
+		Byte 2: High Voltage Indicator
+
+	Sends signals on ID 22, 1 bytes:
+		Bit  0: Tractive system activation
+		Bit  1: Ready to drive

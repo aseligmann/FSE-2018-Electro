@@ -1,0 +1,64 @@
+Modes of operation:
+	TS Off
+	TS On, but not Ready To Drive
+	Ready To Drive
+
+Transition procedures:
+	TS Off -> TS On:
+	Driver presses Tractive System Activation Button, which is connected to cRIO.
+	This makes cRIO close its own shutdown system relay and begin blinking the
+	LED in the Tractive System Activation Button.
+	The cRIO will then send a Load Request to the AMS.
+	The cRIO waits for a signal back from the AMS via the CAN bus.
+	If the cRIO receives a CONTACTORS_ENABLED 1 signal within 45 seconds, it turns
+	on the Tractive System Activation Button LED without blinking it to indicate
+	activation success. The cRIO is now in TS On mode.
+	Otherwise, the cRIO opens its own shutdown system relay and turns off the 
+	LED in the Tractive System Activation Button to indicate activation failure.
+	The cRIO is now back in TS Off Mode.
+
+	TS On -> Ready To Drive:
+	Driver presses Ready To Drive Button, which is connected to cRIO.
+	This makes cRIO send a Ready To Drive CAN packet to the AudioVisual CAN
+	interface and begin blinking the LED in the Ready To Drive Button.
+	When the AudioVisual CAN interface receives this packet, it turns on the 
+	Ready To Drive Sound for 1.5 seconds, then sends a Ready To Drive Allowed
+	CAN packet to the cRIO.
+	This makes the cRIO transition to the Ready To Drive Mode and turn on the
+	LED in the Ready To Drive Button without blinking it.
+	If the cRIO does not receive the Ready To Drive Allowed CAN packet within
+	5 seconds, it turns off the LED in the Ready To Drive Button and returns
+	to the TS On Mode.
+
+	Ready To Drive -> TS On:
+	Driver presses Ready To Drive Button, which is connected to cRIO.
+	This makes cRIO send a STOP CAN packet to both Motor Controllers.
+	cRIO then waits for both Motor Controllers to report a power target of 0
+	via CAN.
+	This makes cRIO transition to TS On mode and turn off the LED in the
+	Ready To Drive Button.
+
+	TS On -> TS Off:
+	Driver presses Tractive System Activation Button, which is connected to cRIO.
+	This makes cRIO stop sending a Load Request (optionally sleep mode) to the
+	AMS, and turn begin blinking the LED in the Tractive System Activation Button.
+	The cRIO waits for a signal back from the AMS via the CAN bus.
+	If the cRIO receives a CONTACTORS_ENABLED 0 signal within 2 seconds, it 
+	turns off its own shutdown system relay, and then turns off the
+	Tractive System Activation Button LED to indicate deactivation success.
+		
+
+Torque Vectoring:
+	Needs signals: BPPS, APPS, Steering Wheel Position
+
+Cooling Control:
+	Needs signals: Motor Status
+
+Audiovisual Signaling:
+	Needs signals: BPPS, Operation Mode
+
+Pedal/steering wheel position:
+	Needs signals: Calibration
+
+GLVS:
+	Needs signals: None

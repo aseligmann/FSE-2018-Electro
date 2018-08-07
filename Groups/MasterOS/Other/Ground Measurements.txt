@@ -1,0 +1,9 @@
+Main grounding point: Tube 17
+Resistance Tube 6: 0.08
+Resistance Tube 1 (top): 0.05
+Resistance Tube 21: 0.11
+Resistance Tube 29: 0.08
+Resistance Tube 34: 0.12
+Resistance Undercarriage Back: 0.1
+Resistance Lower Steering Column: 0.04
+Resistance Steering Wheel Mount: 0.16

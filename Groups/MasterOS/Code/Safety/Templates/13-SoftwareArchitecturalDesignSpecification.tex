@@ -1,0 +1,94 @@
+\section{Software architectural design specification}
+% Reference: DS/ISO 26262-6 section 7.1 -- 7.4.17
+%
+% Pre-requisites:
+%    - Software safety requirements specification
+%
+% Reference: DS/ISO 26262-6 section 7.3.1
+
+\subsection{Pre-existing information}
+% The following information can be considered:
+%    - Technical safety concept
+%    - System design specification
+%    - Available third party software components
+%    - Tool application guidelines
+%
+% Reference: DS/ISO 26262-6 section 7.3.2
+
+\subsection{SYSTEM NAME}
+% The software architectural design represents all software components and their
+% interactions in a hierarchical structure.
+% Both static aspects, such as interfaces and data paths, and dynamic aspects, such
+% as process sequences and timings, must be described.
+% The software architectural design incorporates both safety and non-safety-related
+% requirements, and should both implement the software safety requirements and
+% provide a means to manage the complexity of the software components.
+%
+% Depending on the assigned ASIL of each software safety requirement, different
+% notations should be used for the software architectural design.
+%
+% When designing the software architecture, the following shall be considered:
+%    - Verifiability of the design (traceability between design and requirements)
+%    - Suitability of configurable software
+%    - Feasibility of design and implementation of the software units
+%    - Testability of the architecture during integration testing
+%    - Maintainability of the architecture
+%
+% To avoid failures resulting from high complexity software, the architectural design
+% shall be modular, encapsulated and simple.
+% These properties shall be obtained using the following principles
+% (depending on the assigned ASIL):
+%    - Hierarchical structure of software components
+%    - Restricted size of software components
+%    - Restricted size of interfaces
+%    - High cohesion within each software component (separation of concerns)
+%    - Restricted coupling between software components
+%    - Appropriate scheduling properties
+%    - Restricted use of interrupts/appropriate interrupt priorities
+%
+% The software architectural design shall be developed to the level where all software
+% units are identified.
+% The software architectural design shall describe:
+%    - Software structure and hierarchical levels
+%    - Logical sequence of data processing
+%    - Data types and their characteristics
+%    - External interfaces of the software components
+%    - External interfaces of the software
+%    - Constraints and external dependencies
+%    - Functionality and behaviour
+%    - Control flow and concurrency of processes
+%    - Data flow between the software components
+%    - Data flow at external interfaces
+%    - Temporal constraints
+%
+% If a software components implements several software safety requirements, it shall
+% be developed in compliance with the highest ASIL assigned to the safety requirements.
+%
+% For each software component assigned a software safety requirement, it shall be 
+% evaluated whether any of the following error detection mechanisms should be applied,
+% depending on the assigned ASIL of the software component:
+%    - Range checks of input and output data
+%    - Plausibility checks (e.g. referencing a model, comparing signals from different sources)
+%    - Detection of data errors (e.g. error detecting codes, duplicate data storage)
+%    - External monitoring (e.g. by an ASIC or external watchdog)
+%    - Control flow monitoring
+%    - Diverse software design
+% Additionally, the following error handling mechanisms shall be applied, depending on
+% the assigned ASIL of the software component:
+%    - Static recovery (e.g. saving state before attempting an operation and reloading on failure)
+%    - Graceful degradation
+%    - Independent parallel redundancy (e.g. different algorithms in each parallel path)
+%    - Error correcting codes for data
+%
+% An upper estimation of required resources for the software design shall be made, covering:
+%    - Execution time
+%    - Storage space
+%    - Communication resources
+%
+% Reference:
+%    - DS/ISO 26262-6 section 7.2 and 7.4.1 -- 7.4.17
+%    - Software architectural design notations: DS/ISO 26262-6 Table 2
+%    - Software architectural design principles: DS/ISO 26262-6 Table 3
+%    - Error detection mechanisms: DS/ISO 26262-6 Table 4
+%    - Error handling mechanisms: DS/ISO 26262-6 Table 5
+% <<< Repeat this section for each system required to implement the item >>>
